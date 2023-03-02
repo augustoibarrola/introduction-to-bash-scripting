@@ -13,8 +13,7 @@ For example, lets run the (incorrect) command $(ColorGreen 'ls --hello'):"
 read a 
 
 echo -e "
-$(ColorGreen 'ls --hello')
-"
+$(ColorGreen 'ls --hello')"
 
 # ls --hello 2>&1  #- [What does " 2>&1 " mean?](https://stackoverflow.com/questions/818255/what-does-21-mean)
 ls --hello 2> >(sed $'s,.*,\e[31m&\e[m,'>&2) #- [bash: print stderr in red color](https://serverfault.com/questions/59262/bash-print-stderr-in-red-color)

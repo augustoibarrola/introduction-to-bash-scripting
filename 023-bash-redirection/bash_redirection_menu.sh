@@ -44,7 +44,7 @@ esac
     # script being called. We do this so that we can highlight words in the 
     # sourced script using the methods defined in this script.
 
-clear 
+# clear 
 
 echo -e "\nWhich $(ColorGreen 'File Descriptor') do you want to learn about?"
 
