@@ -5,23 +5,26 @@ echo -e "\n\033[1mSTDERR :: STANDARD ERROR :: (fd: 2)\033[0m"
 echo -e "
 $(ColorBlue 'STDERR') can be redirected using the $(ColorGreen '2>') operator."
 
-read a
-if [ ${a} == "q" ]; then echo -e "Okay – Bye!" && exit 0; fi
+echo -e -n "
+\033[36mBack to menu? [M/q]\033[0m "
+read a 
+    case ${a} in 
+        M|m) menu ;;
+        q) echo -e "Okay – Bye!" && exit 0 ;;
+        *)  # fun fact!: excluding the ;; at the end of the line breaks the case statement
+    esac
 
-echo -e "
+echo -e -n "
 For example, lets run the (incorrect) command $(ColorGreen 'ls --hello'):"
 
-read a
-if [ ${a} == "q" ]; then echo -e "Okay – Bye!" && exit 0; fi
+read 
 
 echo -e "
-$(ColorGreen 'ls --hello')"
+$(ColorGreen 'ls --hello')
+"
 
 # ls --hello 2>&1  #- [What does " 2>&1 " mean?](https://stackoverflow.com/questions/818255/what-does-21-mean)
 ls --hello 2> >(sed $'s,.*,\e[31m&\e[m,'>&2) #- [bash: print stderr in red color](https://serverfault.com/questions/59262/bash-print-stderr-in-red-color)
-
-read a
-if [ ${a} == "q" ]; then echo -e "Okay – Bye!" && exit 0; fi 
 
 echo -e "
 This error message is known as the $(ColorBlue 'STDERR') of the command.
@@ -36,8 +39,14 @@ or non-destructivley write to a file.
 However, since this is a $(ColorBlue 'STDERR') and not a $(ColorBlue 'STDOUT'), we have to
 specify the File Descriptor by appending a 2 to > or >>."
 
-read a
-if [ ${a} == "q" ]; then echo -e "Okay – Bye!" && exit 0; fi 
+echo -e -n "
+\033[36mBack to menu? [M/q]\033[0m "
+read a 
+    case ${a} in 
+        M|m) menu ;;
+        q) echo -e "Okay – Bye!" && exit 0 ;;
+        *)  # fun fact!: excluding the ;; at the end of the line breaks the case statement
+    esac
 
 echo -e "
 Error messages in Bash Scripts can be undesirable sometimes. 
@@ -47,15 +56,27 @@ to the $(ColorGreen '/dev/null') file.
 $(ColorGreen '/dev/null') is pseudo-device that takes in text and then 
 immediately discards it."
 
-read a
-if [ ${a} == "q" ]; then echo -e "Okay – Bye!" && exit 0; fi
+echo -e -n "
+\033[36mBack to menu? [M/q]\033[0m "
+read a 
+    case ${a} in 
+        M|m) menu ;;
+        q) echo -e "Okay – Bye!" && exit 0 ;;
+        *)  # fun fact!: excluding the ;; at the end of the line breaks the case statement
+    esac
 
 echo -e "
 The above example can thus be rewritten as: 
 $(ColorGreen 'ls --hello 2> /dev/null')"
 
-read a
-if [ ${a} == "q" ]; then echo -e "Okay – Bye!" && exit 0; fi 
+echo -e -n "
+\033[36mBack to menu? [M/q]\033[0m "
+read a 
+    case ${a} in 
+        M|m) menu ;;
+        q) echo -e "Okay – Bye!" && exit 0 ;;
+        *)  # fun fact!: excluding the ;; at the end of the line breaks the case statement
+    esac
 
 echo -e "
 Further, both $(ColorBlue 'STDOUT') and $(ColorBlue 'STDERR') can be redirected for the same
@@ -67,8 +88,14 @@ necessarily – it's just neater that way. We can easily write
 either or to the same file: 
 $(ColorGreen 'ls --hello > output.txt 2> output.txt')"
 
-read a
-if [ ${a} == "q" ]; then echo -e "Okay – Bye!" && exit 0; fi
+echo -e -n "
+\033[36mBack to menu? [M/q]\033[0m "
+read a 
+    case ${a} in 
+        M|m) menu ;;
+        q) echo -e "Okay – Bye!" && exit 0 ;;
+        *)  # fun fact!: excluding the ;; at the end of the line breaks the case statement
+    esac
 
 echo -e "
 We can even further refactor the above command to something

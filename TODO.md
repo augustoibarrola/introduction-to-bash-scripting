@@ -1,9 +1,8 @@
 # TODO
 
-- [x] add -q to scripts to gracefully quit the process. 
-	- [x] STDIN
-	- [x] STDOUT
-	- [x] STDERR 
+- [x] ~~add -q to scripts to gracefully quit the process.~~
+	- [x] ~~STDIN~~
+	- [x] ~~STDOUT~~
+	- [x] ~~STDERR~~
 
-- [ ] add return option to redirect back to the main menu 
-
+- [x] ~~add return option to scripts <br> it should redirect the user back to the main menu during the course of the script's execution~~

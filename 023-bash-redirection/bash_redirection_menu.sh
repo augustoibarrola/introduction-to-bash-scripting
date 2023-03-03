@@ -21,7 +21,10 @@ ColorRed(){
 }
 
 menu(){
+
 echo -ne "
+Which $(ColorGreen 'File Descriptor') do you want to learn about?
+
 $(ColorGreen '1)') STDIN (fd: 0): Manages the input in the terminal.
 $(ColorGreen '2)') STDOUT (fd: 1): Manages the output text in the terminal.
 $(ColorGreen '3)') STDERR (fd: 2): Manages the error text in the terminal.
@@ -32,9 +35,9 @@ $(ColorBlue 'Choose an Option:') "
 read a
 
 case ${a} in
-    1) . ./bash_stdin/bash_stdin.sh ;; 
-    2) . ./bash_stdout/bash_stdout.sh ;;
-    3) . ./bash_stderr/bash_stderr.sh ;;
+    1) (. ./bash_stdin/bash_stdin.sh) ;; 
+    2) (. ./bash_stdout/bash_stdout.sh) ;;
+    3) (. ./bash_stderr/bash_stderr.sh) ;;
     0) echo -e "Okay – Bye!" && exit 0 ;; 
     *) echo -e "Sorry, that's not an option. Try Again?" && menu ;; 
 esac
@@ -45,7 +48,5 @@ esac
     # sourced script using the methods defined in this script.
 
 # clear 
-
-echo -e "\nWhich $(ColorGreen 'File Descriptor') do you want to learn about?"
 
 menu
