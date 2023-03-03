@@ -12,6 +12,7 @@ terminal screen.
 This is done simply with the help of $(ColorGreen '>') and $(ColorGreen '>>') operators."
 
 read a
+if [ ${a} == "q" ]; then echo -e "Okay – Bye!" && exit 0; fi
 
 echo -e "
 The important thing here to remember is that $(ColorGreen '>') is a destructive
@@ -19,6 +20,7 @@ and $(ColorGreen '>>') is non-destructive. This means that $(ColorGreen '>') wil
 file's contents, while $(ColorGreen '>>') will append it."
 
 read a
+if [ ${a} == "q" ]; then echo -e "Okay – Bye!" && exit 0; fi
 
 echo -e "
 Further, $(ColorGreen '>') can be written as $(ColorGreen '1>') and $(ColorGreen '>>') can similarly be 
