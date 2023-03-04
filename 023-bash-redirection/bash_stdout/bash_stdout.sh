@@ -12,7 +12,7 @@ terminal screen.
 This is done simply with the help of $(ColorGreen '>') and $(ColorGreen '>>') operators."
 
 echo -e -n "
-\033[36mBack to menu? [M/q]\033[0m "
+\033[36m[M/q]\033[0m "
 read a 
     case ${a} in 
         M|m) menu ;;
@@ -26,7 +26,7 @@ and $(ColorGreen '>>') is non-destructive. This means that $(ColorGreen '>') wil
 file's contents, while $(ColorGreen '>>') will append it."
 
 echo -e -n "
-\033[36mBack to menu? [M/q]\033[0m "
+\033[36m[M/q]\033[0m "
 read a 
     case ${a} in 
         M|m) menu ;;
