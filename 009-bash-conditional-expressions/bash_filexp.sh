@@ -1,75 +1,27 @@
 #!/bin/bash
 
-# ## File expressions
+filePath="\033[32m${1}\033[0m"
 
-# * True if file exists.
+if [ -z ${filePath} ]
+then 
+    filePath="/Users/augustoibarrola/Development" 
+fi
 
-# ```bash
-# [[ -a ${file} ]]
-# ```
+echo -e "File Path is ${filePath}"
 
-# * True if file exists and is a block special file.
+function checkFile(){
+. ./bash_filexp_a.sh ${filePath}
+. ./bash_filexp_b.sh ${filePath} 
+. ./bash_filexp_c.sh ${filePath} 
+. ./bash_filexp_d.sh ${filePath} 
+. ./bash_filexp_e.sh ${filePath} 
+. ./bash_filexp_f.sh ${filePath} 
+. ./bash_filexp_h.sh ${filePath}
+. ./bash_filexp_L.sh ${filePath}
+. ./bash_filexp_r.sh ${filePath} 
+. ./bash_filexp_s.sh ${filePath} 
+. ./bash_filexp_w.sh ${filePath} 
+. ./bash_filexp_x.sh ${filePath} 
+}
 
-# ```bash
-# [[ -b ${file} ]]
-# ```
-
-# * True if file exists and is a character special file.
-
-# ```bash
-# [[ -c ${file} ]]
-# ```
-
-# * True if file exists and is a directory.
-
-# ```bash
-# [[ -d ${file} ]]
-# ```
-
-# * True if file exists.
-
-# ```bash
-# [[ -e ${file} ]]
-# ```
-
-# * True if file exists and is a regular file.
-
-# ```bash
-# [[ -f ${file} ]]
-# ```
-
-# * True if file exists and is a symbolic link.
-
-# ```bash
-# [[ -h ${file} ]]
-# ```
-
-# * True if file exists and is readable.
-
-# ```bash
-# [[ -r ${file} ]]
-# ```
-
-# * True if file exists and has a size greater than zero.
-
-# ```bash
-# [[ -s ${file} ]]
-# ```
-
-# * True if file exists and is writable.
-
-# ```bash
-# [[ -w ${file} ]]
-# ```
-
-# * True if file exists and is executable.
-
-# ```bash
-# [[ -x ${file} ]]
-# ```
-
-# * True if file exists and is a symbolic link.
-
-# ```bash
-# [[ -L ${file} ]]
-# ```
+checkFile

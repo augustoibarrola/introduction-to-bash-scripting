@@ -4,16 +4,16 @@
 
 # * True if file exists.
 
+echo -en "-e : True if file exists: "
+
 # ```bash
 # [[ -e ${file} ]]
 # ```
 
-userFolder="/Users/augustoibarrola"
-
-if [[ -e ${userFolder} ]] 
+if [[ -e ${filePath} ]] 
 then 
-    echo -e "Folder/File ${userFolder} exists."
-elif [[ ! -e ${userFolder} ]]
+    echo -e "Folder/File ${filePath} exists."
+elif [[ ! -e ${filePath} ]]
 then
-    echo -e "Folder/File ${userFolder} does not exist."
+    echo -e "Folder/File ${filePath} does not exist."
 fi

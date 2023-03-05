@@ -4,19 +4,19 @@
 
 # * True if file exists and is a directory.
 
+echo -en "-d : True if file exists and is a directory: "
+
 # ```bash
 # [[ -d ${file} ]]
 # ```
 
-userFolder="/Users/augustoibarrola"
-
-if [[ -d ${userFolder} ]] 
+if [[ -d ${filePath} ]] 
 then 
-    echo -e "User Folder ${userFolder} exists and is a directory."
-elif [[ -a ${userFolder} ]]
+    echo -e "User Folder ${filePath} exists and is a directory."
+elif [[ -a ${filePath} ]]
 then
-    echo -e "User Folder ${userFolder} exists, but it is not a directory."
-elif [[ ! -a ${userFolder} ]]
+    echo -e "User Folder ${filePath} exists, but it is not a directory."
+elif [[ ! -a ${filePath} ]]
 then
-    echo -e "File or Directory ${userFolder} does not exist."
+    echo -e "File or Directory ${filePath} does not exist."
 fi

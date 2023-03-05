@@ -4,18 +4,19 @@
 
 # * True if file exists and is a character special file.
 
+echo -en "-c : True if file exists and is a character special file: "
+
 # ```bash
 # [[ -c ${file} ]]
 # ```
-userFolder="/Users/augustoibarrola"
 
-if [[ -c ${userFolder} ]] 
+if [[ -c ${filePath} ]] 
 then 
-    echo -e "User Folder ${userFolder} exists and is a character special file."
-elif [[ -a ${userFolder} ]]
+    echo -e "User Folder ${filePath} exists and is a character special file."
+elif [[ -a ${filePath} ]]
 then
-    echo -e "User Folder ${userFolder} exists, but it is not a character special file."
-elif [[ ! -a ${userFolder} ]]
+    echo -e "User Folder ${filePath} exists, but it is not a character special file."
+elif [[ ! -a ${filePath} ]]
 then
-    echo -e "File or Directory ${userFolder} does not exist."
+    echo -e "File or Directory ${filePath} does not exist."
 fi
