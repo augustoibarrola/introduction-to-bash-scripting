@@ -13,7 +13,7 @@
 # However, you can extend the use
 # case by redirecting the input to the commands that take $(ColorBlue 'STDIN').
 # "
-
+clear 
 echo -e "\n\033[1mSTDIN :: STANDARD INPUT :: (fd: 0)\033[0m"
 
 cat << EOF

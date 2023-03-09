@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+clear
+
 echo -e "\n\033[1mSTDERR :: STANDARD ERROR :: (fd: 2)\033[0m"
 
 echo -e "

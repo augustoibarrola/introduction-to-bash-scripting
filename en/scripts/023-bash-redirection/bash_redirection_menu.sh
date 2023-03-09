@@ -37,9 +37,9 @@ $(ColorBlue 'Choose an Option:') "
 read a
 
 case ${a} in
-    1) (. ./bash_stdin/bash_stdin.sh) ;; 
-    2) (. ./bash_stdout/bash_stdout.sh) ;;
-    3) (. ./bash_stderr/bash_stderr.sh) ;;
+    1) (. ./023-bash-redirection/bash_stdin/bash_stdin.sh) ;; 
+    2) (. ./023-bash-redirection/bash_stdout/bash_stdout.sh) ;;
+    3) (. ./023-bash-redirection/bash_stderr/bash_stderr.sh) ;;
     0) echo -e "Okay – Bye!" && exit 0 ;; 
     *) echo -e "Sorry, that's not an option. Try Again?" && menu ;; 
 esac

@@ -1,5 +1,6 @@
 #!/bin/bash 
 
+clear
 echo -e "\n\033[1mSTDOUT :: STANDARD OUTPUT :: (fd: 1)\033[0m"
 
 echo -e "
