@@ -10,5 +10,7 @@
 
 - [x] ~~give menu file call optional path argument~~
 
-- [ ] 4. delete all unnecessary files (keep only bash files and ./ebook/en/content ./ebook/en/export ./ebook/es/content ./ebook/es/export)
+- [x] ~~4. delete all unnecessary files (keep only bash files and ./ebook/en/content ./ebook/en/export ./ebook/es/content ./ebook/es/export)~~
+
+- [ ] 5. (023) "[M/q]" option should be cleared everytime the script continues (i.e., whenever M is selected)
 
